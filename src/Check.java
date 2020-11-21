@@ -3,7 +3,9 @@ import java.util.regex.Pattern;
 
 public class Check {
 
+    //Статус работы програмы
     static boolean checkExit = true;
+
     //Проверка на правильность ввода
     public static boolean validationOfInput (String value){
         if (checkOfArabic(value)&&chekOfRoman(value)){

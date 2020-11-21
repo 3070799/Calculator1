@@ -1,3 +1,6 @@
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.TreeMap;
 
 public class RomanFormat {
@@ -63,7 +66,7 @@ public class RomanFormat {
     }
 
     //строку римских чисел в масив арабских
-    public static int[] fromStringToInt(String str){
+    public static int [] fromStringToInt(String str){
         String[] temp;
         temp = str.split("[+|-|*|/]");
         return new int[]{romanToInt(temp[0]),romanToInt(temp[1])};
