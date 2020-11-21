@@ -28,18 +28,19 @@ public class Check {
     }
 
     //Проверка на выход из программы
-    public static boolean checkExit(){
+    public static boolean checkExit() {
         System.out.println("Чтобы выполниль еще одну операцию введите: 1");
         System.out.println("чтобы закрыть програму введите: 2");
-        int value = Integer.parseInt(Operation.readConsoleValue());
-        if (value == 1){
+        String value = Operation.readConsoleValue();
+        if (value.equalsIgnoreCase("1")) {
             return true;
-        }else if (value == 2){
-            return  false;
-        }else {
+        } else if (value.equalsIgnoreCase("2")) {
+            return false;
+        } else {
             System.out.println("Некоректрый ввод, попробуйте еще раз");
             checkExit();
+
+            return true;
         }
-        return true;
     }
 }

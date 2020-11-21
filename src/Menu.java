@@ -17,6 +17,7 @@ public class Menu {
             System.out.println(RomanFormat.operation(value));
         }else {
             System.out.println("Неверно ведено выражение введите в формате([1-10][+,-,*,/][1-10] или [I-X][+,-,*,/][I-X]");
+            mainMenu();
         }
 
 
