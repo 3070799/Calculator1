@@ -19,7 +19,7 @@ public class RomanFormat {
         map.put(1000,"M");
     }
 
-    //Перевод арабских чисел в румынские
+    //Перевод арабских чисел в римские
     public static String intToRoman(int number){
         int i = map.floorKey(number);
         if(number == i){
@@ -28,7 +28,7 @@ public class RomanFormat {
         return map.get(i) + intToRoman(number-i);
     }
 
-    //Перевод румынских чисел в арабские
+    //Перевод римских чисел в арабские
     public static int romanToInt (String s){
         char [] arrChar = s.toCharArray();
         int [] arrInt = new int[arrChar.length];
@@ -69,7 +69,7 @@ public class RomanFormat {
         return new int[]{romanToInt(temp[0]),romanToInt(temp[1])};
     }
 
-    //операция с румынскими числами
+    //операция с рримскими числами
     public static String operation(String str) {
         int a = fromStringToInt(str)[0];
         int b = fromStringToInt(str)[1];

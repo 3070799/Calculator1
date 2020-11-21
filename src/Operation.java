@@ -34,4 +34,19 @@ public class Operation {
         String[] temp = str.split("[+|-|*|/]");
         return new int[]{Integer.parseInt(temp[0]),Integer.parseInt(temp[1])};
     }
+
+    //операция с арабскими числами
+    public static int allOperation(String str){
+
+        if (str.indexOf('+') != -1) {
+            return plus(fromStringToInt(str));
+        } else if (str.indexOf('-') != -1) {
+           return minus(fromStringToInt(str));
+        } else if (str.indexOf('*') != -1) {
+            return multiplication(fromStringToInt(str));
+        } else if (str.indexOf('/') != -1) {
+            return division(fromStringToInt(str));
+        }
+        return 0;
+    }
 }

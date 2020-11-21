@@ -4,10 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        boolean checkExit = true;
-        while (checkExit) {
+        while (Check.checkExit) {
             Menu.mainMenu();
-            checkExit = Check.checkExit();
         }
 
 
