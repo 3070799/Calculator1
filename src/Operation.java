@@ -19,6 +19,10 @@ public class Operation {
 
     // Операция деления (/)
     public static int division(int[] arrInt){
+        if (arrInt[1] == 0){
+            System.out.println("На ноль делить нельзя!");
+            return 0;
+        }
         return arrInt[0]/arrInt[1];
     }
 
