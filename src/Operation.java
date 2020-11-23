@@ -19,10 +19,6 @@ public class Operation {
 
     // Операция деления (/)
     public static int division(int[] arrInt){
-        if (arrInt[1] == 0){
-            System.out.println("На ноль делить нельзя!");
-            return 0;
-        }
         return arrInt[0]/arrInt[1];
     }
 
@@ -49,7 +45,12 @@ public class Operation {
         } else if (str.indexOf('*') != -1) {
             return multiplication(fromStringToInt(str));
         } else if (str.indexOf('/') != -1) {
-            return division(fromStringToInt(str));
+            try {
+                return division(fromStringToInt(str));
+            } catch (ArithmeticException E) {
+                System.out.println("На ноль делить нельзя");
+                Menu.mainMenu();
+            }
         }
         return 0;
     }
