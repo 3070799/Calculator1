@@ -16,7 +16,7 @@ public class Check {
 
     // Проверка арабских чисел
     public static boolean checkOfArabic (String value){
-        String regex = "[0-9]([0])?[+|-|*|/][0-9]([0])?";
+        String regex = "[0-9]([0])?[+|\\-|*|/][0-9]([0])?";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(value);
         return matcher.matches();
@@ -24,7 +24,7 @@ public class Check {
 
     // Проверка румынских чисел
     public static boolean chekOfRoman (String value){
-        String regex = "(X|IX|IV|V?I{0,3})[+|-|*|/](X|IX|IV|V?I{0,3})";
+        String regex = "(X|IX|IV|V?I{0,3})[+|\\-|*|/](X|IX|IV|V?I{0,3})";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(value);
         return matcher.matches();

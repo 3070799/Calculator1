@@ -31,7 +31,7 @@ public class Operation {
 
     //Масив чисел из строки
     public static int[] fromStringToInt(String str){
-        String[] temp = str.split("[+|-|*|/]");
+        String[] temp = str.split("[+|\\-|*|/]");
         return new int[]{Integer.parseInt(temp[0]),Integer.parseInt(temp[1])};
     }
 

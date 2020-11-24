@@ -68,7 +68,7 @@ public class RomanFormat {
     //строку римских чисел в масив арабских
     public static int [] fromStringToInt(String str){
         String[] temp;
-        temp = str.split("[+|-|*|/]");
+        temp = str.split("[+|\\-|*|/]");
         return new int[]{romanToInt(temp[0]),romanToInt(temp[1])};
     }
 
